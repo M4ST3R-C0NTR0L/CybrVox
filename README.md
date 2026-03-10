@@ -475,7 +475,7 @@ interface TranscriptSegment {
 | `ANTHROPIC_API_KEY` | For Anthropic provider | Your Anthropic API key |
 | `DEEPGRAM_API_KEY` | For Deepgram provider | Your Deepgram API key |
 | `PORT` | No | Server port (default: 3000) |
-| `VOXKIT_DEBUG` | No | Enable debug logging (`true`/`false`) |
+| `CYBRVOX_DEBUG` | No | Enable debug logging (`true`/`false`) |
 
 ---
 

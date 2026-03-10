@@ -1,5 +1,5 @@
 /**
- * VoxKit CLI - Deploy Command
+ * CybrVox CLI - Deploy Command
  * Show deployment instructions for various platforms
  */
 
@@ -18,7 +18,7 @@ export async function deployCommand(options: DeployOptions): Promise<void> {
 }
 
 function showAllInstructions(): void {
-  console.log(chalk.blue('\n🚀 VoxKit Deployment Options\n'))
+  console.log(chalk.blue('\n🚀 CybrVox Deployment Options\n'))
   
   console.log(chalk.cyan('Available platforms:\n'))
   
@@ -35,10 +35,10 @@ function showAllInstructions(): void {
   console.log(chalk.gray('   Self-host anywhere\n'))
 
   console.log(chalk.cyan('Run one of the following for specific instructions:\n'))
-  console.log(chalk.white('  voxkit deploy -p railway'))
-  console.log(chalk.white('  voxkit deploy -p render'))
-  console.log(chalk.white('  voxkit deploy -p fly'))
-  console.log(chalk.white('  voxkit deploy -p docker\n'))
+  console.log(chalk.white('  cybrvox deploy -p railway'))
+  console.log(chalk.white('  cybrvox deploy -p render'))
+  console.log(chalk.white('  cybrvox deploy -p fly'))
+  console.log(chalk.white('  cybrvox deploy -p docker\n'))
 }
 
 function showPlatformInstructions(platform: string): void {

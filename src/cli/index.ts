@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * VoxKit CLI
+ * CybrVox CLI
  * 
  * Commands:
- *   voxkit init <name>     - Scaffold a new voice agent
- *   voxkit dev             - Run locally with hot reload
- *   voxkit deploy          - Show deployment instructions
+ *   cybrvox init <name>     - Scaffold a new voice agent
+ *   cybrvox dev             - Run locally with hot reload
+ *   cybrvox deploy          - Show deployment instructions
  */
 
 import { Command } from 'commander'
@@ -18,8 +18,8 @@ import { versionCommand } from './commands/version.js'
 const program = new Command()
 
 program
-  .name('voxkit')
-  .description('VoxKit - Open Source Voice Agent Framework')
+  .name('cybrvox')
+  .description('CybrVox - Open Source Voice Agent Framework')
   .version('1.0.0', '-v, --version', 'Show version number')
 
 // Init command

@@ -1,5 +1,5 @@
 /**
- * VoxKit CLI - Init Command
+ * CybrVox CLI - Init Command
  * Scaffold a new voice agent project
  */
 
@@ -68,22 +68,22 @@ export async function initCommand(name: string, options: InitOptions): Promise<v
   console.log(chalk.white('  npm install'))
   console.log(chalk.white('  cp .env.example .env'))
   console.log(chalk.white('  # Edit .env with your API keys'))
-  console.log(chalk.white('  npx voxkit dev\n'))
+  console.log(chalk.white('  npx cybrvox dev\n'))
 }
 
 function generatePackageJson(name: string, options: InitOptions): string {
   return JSON.stringify({
     name: name.toLowerCase().replace(/\s+/g, '-'),
     version: '1.0.0',
-    description: 'Voice agent powered by VoxKit',
+    description: 'Voice agent powered by CybrVox',
     type: 'module',
     scripts: {
-      dev: 'voxkit dev',
+      dev: 'cybrvox dev',
       start: 'node dist/agent.js',
       build: 'tsc'
     },
     dependencies: {
-      voxkit: '^1.0.0'
+      cybrvox: '^1.0.0'
     },
     devDependencies: {
       '@types/node': '^20.0.0',
@@ -122,7 +122,7 @@ function generateAgentCode(options: InitOptions): string {
 
   const prompt = systemPrompts[options.template] || systemPrompts.basic
 
-  return `import { VoxAgent, ${providerImport}Provider } from 'voxkit'
+  return `import { VoxAgent, ${providerImport}Provider } from 'cybrvox'
 
 const agent = new VoxAgent({
   provider: new ${providerImport}Provider({
@@ -176,7 +176,7 @@ function generateEnvExample(options: InitOptions): string {
 
   return `${envVars[options.provider] || envVars.openai}
 PORT=3000
-VOXKIT_DEBUG=false
+CYBRVOX_DEBUG=false
 `
 }
 
@@ -197,7 +197,7 @@ dist/
 function generateReadme(name: string, options: InitOptions): string {
   return `# ${name}
 
-Voice agent powered by [VoxKit](https://github.com/voxkit/voxkit).
+Voice agent powered by [CybrVox](https://github.com/M4ST3R-C0NTR0L/CybrVox).
 
 ## Getting Started
 
@@ -214,14 +214,14 @@ Voice agent powered by [VoxKit](https://github.com/voxkit/voxkit).
 
 3. Run the development server:
    \`\`\`bash
-   npx voxkit dev
+   npx cybrvox dev
    \`\`\`
 
 ## Deployment
 
 See deployment instructions:
 \`\`\`bash
-npx voxkit deploy
+npx cybrvox deploy
 \`\`\`
 
 ## Project Structure
@@ -231,7 +231,6 @@ npx voxkit deploy
 
 ## Learn More
 
-- [VoxKit Documentation](https://github.com/voxkit/voxkit#readme)
-- [API Reference](https://github.com/voxkit/voxkit/blob/main/docs/api.md)
+- [CybrVox Documentation](https://github.com/M4ST3R-C0NTR0L/CybrVox#readme)
 `
 }

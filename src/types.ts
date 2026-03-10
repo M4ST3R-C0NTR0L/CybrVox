@@ -1,5 +1,5 @@
 /**
- * Core types and interfaces for VoxKit
+ * Core types and interfaces for CybrVox
  */
 
 // Voice options
@@ -113,6 +113,9 @@ export interface VoxKitPlugin {
   onLead?(lead: LeadInfo): void
   destroy?(): Promise<void> | void
 }
+
+// Alias for VoxKitPlugin (new name)
+export type CybrVoxPlugin = VoxKitPlugin
 
 // VoxAgent class placeholder for type reference
 export interface VoxAgent {

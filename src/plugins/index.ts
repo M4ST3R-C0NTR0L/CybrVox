@@ -3,7 +3,7 @@
  *
  * Plugins extend VoxAgent with additional capabilities.
  * Built-in plugins are exported here; community plugins
- * can implement the VoxKitPlugin interface from 'voxkit'.
+ * can implement the VoxKitPlugin interface from 'cybrvox'.
  */
 
 export { TranscriptLoggerPlugin } from './transcript-logger.js'

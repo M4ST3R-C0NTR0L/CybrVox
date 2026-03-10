@@ -1,5 +1,5 @@
 /**
- * VoxKit CLI - Dev Command
+ * CybrVox CLI - Dev Command
  * Run the voice agent locally with hot reload
  */
 
@@ -21,10 +21,10 @@ export async function devCommand(options: DevOptions): Promise<void> {
   const agentPath = resolve(process.cwd(), 'src', 'agent.ts')
   
   if (!existsSync(agentPath)) {
-    throw new Error('No agent.ts found in src/. Run `voxkit init` first.')
+    throw new Error('No agent.ts found in src/. Run `cybrvox init` first.')
   }
 
-  console.log(chalk.blue('🎙️  Starting VoxKit development server...\n'))
+  console.log(chalk.blue('🎙️  Starting CybrVox development server...\n'))
   console.log(chalk.gray(`Port: ${options.port}`))
   console.log(chalk.gray(`Host: ${options.host}`))
   console.log(chalk.gray(`Hot reload: ${options.reload ? 'enabled' : 'disabled'}\n`))

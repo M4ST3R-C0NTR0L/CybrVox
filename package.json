@@ -1,5 +1,5 @@
 {
-  "name": "voxkit",
+  "name": "cybrvox",
   "version": "1.0.0",
   "description": "Open source voice agent framework — build AI voice agents in ~20 lines of TypeScript",
   "type": "module",
@@ -23,7 +23,7 @@
     "LICENSE"
   ],
   "bin": {
-    "voxkit": "./dist/cli/index.js"
+    "cybrvox": "./dist/cli/index.js"
   },
   "scripts": {
     "build": "tsup",
@@ -52,18 +52,18 @@
     "claude",
     "grok",
     "deepgram",
-    "voxkit"
+    "cybrvox"
   ],
-  "author": "VoxKit Contributors",
+  "author": "Cybrflux",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/voxkit/voxkit.git"
+    "url": "https://github.com/M4ST3R-C0NTR0L/CybrVox.git"
   },
   "bugs": {
-    "url": "https://github.com/voxkit/voxkit/issues"
+    "url": "https://github.com/M4ST3R-C0NTR0L/CybrVox/issues"
   },
-  "homepage": "https://github.com/voxkit/voxkit#readme",
+  "homepage": "https://github.com/M4ST3R-C0NTR0L/CybrVox#readme",
   "dependencies": {
     "ws": "^8.16.0",
     "commander": "^11.1.0",

@@ -5,7 +5,7 @@
  * 
  * @example
  * ```typescript
- * import { VoxAgent, OpenAIProvider } from 'voxkit'
+ * import { VoxAgent, OpenAIProvider } from 'cybrvox'
  * 
  * const agent = new VoxAgent({
  *   provider: new OpenAIProvider({ model: 'gpt-4o' }),

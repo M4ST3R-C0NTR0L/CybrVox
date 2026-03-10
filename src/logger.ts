@@ -1,5 +1,5 @@
 /**
- * Logger utility for VoxKit
+ * Logger utility for CybrVox
  */
 
 import type { Logger } from './types.js'
@@ -8,9 +8,9 @@ export class VoxKitLogger implements Logger {
   private namespace: string
   private debugEnabled: boolean
 
-  constructor(namespace: string = 'voxkit', debugEnabled = false) {
+  constructor(namespace: string = 'cybrvox', debugEnabled = false) {
     this.namespace = namespace
-    this.debugEnabled = debugEnabled || process.env.VOXKIT_DEBUG === 'true'
+    this.debugEnabled = debugEnabled || process.env.CYBRVOX_DEBUG === 'true' || process.env.VOXKIT_DEBUG === 'true'
   }
 
   private formatMessage(level: string, message: string): string {
@@ -41,4 +41,4 @@ export class VoxKitLogger implements Logger {
   }
 }
 
-export const logger = new VoxKitLogger('voxkit')
+export const logger = new VoxKitLogger('cybrvox')
